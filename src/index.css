@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Cormorant+Garamond:wght@500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root { color-scheme: light; }
+  html { direction: rtl; scroll-behavior: smooth; }
+  body { margin: 0; background: #F8F5EF; color: #2D2D2D; font-family: 'IBM Plex Sans Arabic', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, h4, h5, h6 { font-family: 'Alexandria', system-ui, sans-serif; }
+  button, a { -webkit-tap-highlight-color: transparent; }
+  :focus-visible { outline: 3px solid #D0A933; outline-offset: 3px; }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #F8F5EF; }
+::-webkit-scrollbar-thumb { background: #D0A933; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #002C0F; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+}
+
+@media print {
+  body { background: white !important; color: black !important; }
+  .no-print { display: none !important; }
+}
